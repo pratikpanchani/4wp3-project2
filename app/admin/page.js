@@ -14,6 +14,9 @@ export default async function AdminPage() {
   return (
     <div className="container mt-5">
       <div className="d-flex justify-content-between align-items-center mb-4">
+      <Link href="/" className="btn btn-outline-secondary">
+          Back to Home
+        </Link>
         <h1 className="mb-0">Admin - Manage Movies</h1>
         <Link href="/admin/create" className="btn btn-primary">
           Create New Movie

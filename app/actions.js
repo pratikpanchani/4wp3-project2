@@ -25,7 +25,7 @@ export async function createMovie(formData) {
     movie_rating: Number(formData.get('movie_rating')),
   };
 
-  await fetch(API_BASE_URL, {
+  await fetch(API_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(newMovie),

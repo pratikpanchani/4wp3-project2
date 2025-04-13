@@ -6,6 +6,9 @@ export default async function Collection() {
 
   return (
     <div className="container mt-4">
+            <Link href="/" className="btn btn-outline-secondary">
+          Back to Home
+        </Link>
       <h2 className="mb-3">Movie Collection</h2>
       <div className="list-group">
         {movies.length === 0 && (
