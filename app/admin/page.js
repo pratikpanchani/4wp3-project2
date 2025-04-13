@@ -10,13 +10,18 @@ export default async function AdminPage() {
     await deleteMovie(id);
   }
 
+ 
   return (
-    <div>
-      <h1>Admin - Manage Movies</h1>
-      <Link href="/admin/create">Create New Movie</Link>
+    <div className="container mt-5">
+      <div className="d-flex justify-content-between align-items-center mb-4">
+        <h1 className="mb-0">Admin - Manage Movies</h1>
+        <Link href="/admin/create" className="btn btn-primary">
+          Create New Movie
+        </Link>
+      </div>
 
-      <table>
-        <thead>
+      <table className="table table-bordered table-striped">
+        <thead className="table-dark">
           <tr>
             <th>ID</th>
             <th>Name</th>
@@ -29,13 +34,19 @@ export default async function AdminPage() {
             <tr key={movie.id}>
               <td>{movie.id}</td>
               <td>{movie.movie_name}</td>
-              <td>{movie.movie_year}</td>
+              <td>{new Date(movie.movie_year).getFullYear()}</td>
               <td>
-                <Link href={`/admin/edit/${movie.id}`}>Edit</Link>
-                <form action={handleDelete} style={{ display: 'inline', marginLeft: '1rem' }}>
-                  <input type="hidden" name="id" value={movie.id} />
-                  <button type="submit">Delete</button>
-                </form>
+                <div className="d-flex gap-2">
+                  <Link href={`/admin/edit/${movie.id}`} className="btn btn-sm btn-warning">
+                    E
+                  </Link>
+                  <form action={handleDelete}>
+                    <input type="hidden" name="id" value={movie.id} />
+                    <button type="submit" className="btn btn-sm btn-danger">
+                      D
+                    </button>
+                  </form>
+                </div>
               </td>
             </tr>
           ))}
