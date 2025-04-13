@@ -1,18 +1,12 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 async function getMovie(id) {
-  try {
     const res = await fetch(`http://localhost:4000/movies/${id}`);
-    if (!res.ok) return null;
     return await res.json();
-  } catch (err) {
-    console.error('Error fetching movie:', err);
-    return null;
-  }
 }
 
 export async function generateStaticParams() {
-  const res = await fetch('http://localhost:4000/movies');
+  const res = await fetch("http://localhost:4000/movies");
   const movies = await res.json();
 
   return movies.slice(0, 10).map((movie) => ({
@@ -21,20 +15,42 @@ export async function generateStaticParams() {
 }
 
 export default async function MovieDetailPage({ params }) {
-    let movie;
-    if (params?.id) {
-        movie = await getMovie(params.id);
-    }
+  const movie = await getMovie(params.id);
+
+  if (!movie) {
+    return (
+      <div className="container mt-4">
+        <h1>Movie N/A</h1>
+        <Link href="/collection" className="btn btn-secondary mt-3">
+          Back
+        </Link>
+      </div>
+    );
+  }
 
   return (
-    <div>
-      <Link href="/collection">Back</Link>
-      <h1 className="mb-4">{movie.movie_name} Details</h1>
-      <table>
+    <div className="container mt-4">
+    <div className="text-end mb-3">
+    <Link href="/collection" className="btn btn-secondary">
+      Back
+    </Link>
+  </div>
+      <h1 className="mb-4">Movie details for {movie.movie_name}:</h1>
+      <table className="table table-bordered">
         <tbody>
           {Object.entries(movie).map(([key, value]) => (
             <tr key={key}>
-              <th>{key}</th>
+              <th>
+                {{
+                  id: "ID",
+                  movie_name: "Movie Name",
+                  movie_year: "Release Date",
+                  movie_genre: "Genre",
+                  movie_director: "Director",
+                  user_comments: "User Comments",
+                  movie_rating: "Rating (1 to 5)",
+                }[key] || key}
+              </th>
               <td>{String(value)}</td>
             </tr>
           ))}
