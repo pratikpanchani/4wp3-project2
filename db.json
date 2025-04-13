@@ -1,0 +1,139 @@
+{
+    "movies": [
+      {
+        "id": "1",
+        "movie_name": "Parasite",
+        "movie_year": "2019-05-30",
+        "movie_genre": "Thriller",
+        "movie_director": "Bong Joon-ho",
+        "user_comments": "Dark story for division between different classes",
+        "movie_rating": 5
+      },
+      {
+        "id": "2",
+        "movie_name": "Dangal",
+        "movie_year": "2016-12-21",
+        "movie_genre": "Biography",
+        "movie_director": "Nitesh Tiwari",
+        "user_comments": "Story of determination",
+        "movie_rating": 4
+      },
+      {
+        "id": "3",
+        "movie_name": "Gully Boy",
+        "movie_year": "2019-02-14",
+        "movie_genre": "Musical Drama",
+        "movie_director": "Zoya Akhtar",
+        "user_comments": "Raw story from the streets of Mumbai",
+        "movie_rating": 4
+      },
+      {
+        "id": "4",
+        "movie_name": "Pathaan",
+        "movie_year": "2023-01-25",
+        "movie_genre": "Action",
+        "movie_director": "Siddharth Anand",
+        "user_comments": "A high energy spy thriller",
+        "movie_rating": 3
+      },
+      {
+        "id": "5",
+        "movie_name": "RRR",
+        "movie_year": "2022-03-25",
+        "movie_genre": "Historical Action",
+        "movie_director": "S. S. Rajamouli",
+        "user_comments": "Epic and very emotional",
+        "movie_rating": 5
+      },
+      {
+        "id": "6",
+        "movie_name": "Jawan",
+        "movie_year": "2023-09-07",
+        "movie_genre": "Action",
+        "movie_director": "Atlee",
+        "user_comments": "packed with action",
+        "movie_rating": 4
+      },
+      {
+        "id": "7",
+        "movie_name": "Oppenheimer",
+        "movie_year": "2023-07-21",
+        "movie_genre": "Biography",
+        "movie_director": "Christopher Nolan",
+        "user_comments": "masterpiece.",
+        "movie_rating": 5
+      },
+      {
+        "id": "8",
+        "movie_name": "Barbie",
+        "movie_year": "2023-07-21",
+        "movie_genre": "Fantasy",
+        "movie_director": "Greta Gerwig",
+        "user_comments": "fun and full of color",
+        "movie_rating": 4
+      },
+      {
+        "id": "9",
+        "movie_name": "The Batman",
+        "movie_year": "2022-03-04",
+        "movie_genre": "Action",
+        "movie_director": "Matt Reeves",
+        "user_comments": "dark and a detective comic tale",
+        "movie_rating": 4
+      },
+      {
+        "id": "10",
+        "movie_name": "Joker",
+        "movie_year": "2019-10-04",
+        "movie_genre": "Psychological Thriller",
+        "movie_director": "Todd Phillips",
+        "user_comments": "Dark with powerful",
+        "movie_rating": 5
+      },
+      {
+        "id": "11",
+        "movie_name": "Drishyam 2",
+        "movie_year": "2022-11-18",
+        "movie_genre": "Crime Thriller",
+        "movie_director": "Abhishek Pathak",
+        "user_comments": "tight storytelling",
+        "movie_rating": 4
+      },
+      {
+        "id": "12",
+        "movie_name": "Pushpa: The Rise",
+        "movie_year": "2021-12-17",
+        "movie_genre": "Action",
+        "movie_director": "Sukumar",
+        "user_comments": "stylist entertainer",
+        "movie_rating": 4
+      },
+      {
+        "id": "13",
+        "movie_name": "Chhichhore",
+        "movie_year": "2019-09-06",
+        "movie_genre": "Comedy-Drama",
+        "movie_director": "Nitesh Tiwari",
+        "user_comments": "nostalgic",
+        "movie_rating": 4
+      },
+      {
+        "id": "14",
+        "movie_name": "Avengers: Endgame",
+        "movie_year": "2019-04-26",
+        "movie_genre": "Superhero",
+        "movie_director": "Anthony and Joe Russo",
+        "user_comments": "finale of the decade",
+        "movie_rating": 5
+      },
+      {
+        "id": "15",
+        "movie_name": "Spider-Man: No Way Home",
+        "movie_year": "2021-12-17",
+        "movie_genre": "Superhero",
+        "movie_director": "Jon Watts",
+        "user_comments": "multiverse magic",
+        "movie_rating": 5
+      }
+    ]
+  }  
