@@ -1,20 +1,12 @@
 import Link from "next/link";
-
-async function getMovie(id) {
-    const res = await fetch(`http://localhost:4000/movies/${id}`);
-    return await res.json();
-}
+import { getMovie, getAllMovies } from '@/app/actions';
 
 export async function generateStaticParams() {
-  const res = await fetch("http://localhost:4000/movies");
-  const movies = await res.json();
-
-  return movies.slice(0, 10).map((movie) => ({
-    id: movie.id.toString(),
-  }));
+  const movies = await getAllMovies();
+  return movies.slice(0, 10).map((movie) => ({ id: movie.id.toString() }));
 }
 
-export default async function MovieDetailPage({ params }) {
+export default async function MovieDetail({ params }) {
   const movie = await getMovie(params.id);
 
   if (!movie) {

@@ -1,12 +1,8 @@
 import Link from 'next/link';
+import { getAllMovies } from '@/app/actions';
 
-async function getMovies() {
-        const res = await fetch('http://localhost:4000/movies');
-    return await res.json();
-}
-
-export default async function CollectionPage() {
-  const movies = await getMovies();
+export default async function Collection() {
+  const movies = await getAllMovies();
 
   return (
     <div className="container mt-4">
