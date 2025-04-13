@@ -7,7 +7,8 @@ export async function generateStaticParams() {
 }
 
 export default async function MovieDetail({ params }) {
-  const movie = await getMovie(params.id);
+  const { id } = await params;
+  const movie = await getMovie(id);
 
   if (!movie) {
     return (
